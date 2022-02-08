@@ -1,0 +1,95 @@
+.content{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 11.4rem 1fr;
+
+    grid-template-areas: 
+    'header header'
+    'left right';
+}
+header{
+    grid-area: header;
+}
+
+#bg{
+    grid-area: left;
+    background: url(../images/home-illustration.svg) no-repeat top/contain;
+    background-position-x: -7rem;
+}
+
+main{
+    margin-top: -12rem;
+    grid-area: right;
+    display: flex;
+    align-items: center;
+}
+main .container{
+    width: min(36.3rem, 100%);
+}
+
+.h2-title{
+    margin-bottom: 2.4rem;
+}
+
+.container input{
+    border: .2rem solid var(--blue-grey);
+    padding: 0 1.6rem;
+    outline: none;
+}
+
+input, button, .button{
+    width: 100%;
+    margin-bottom: 1.8rem;
+}
+
+/* SEPARATOR LINE */
+
+.separator{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 4rem 0;
+}
+
+.separator div:nth-child(2){
+    padding: 0 1.35rem;
+
+    color: var(--blue-grey);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    line-height: 0;
+}
+
+.separator div:nth-child(1),
+.separator div:nth-child(3){
+    width: 37%;
+    height: 1px;
+
+    background: var(--blue-grey);
+}
+
+
+/* ------ BG BALLS */
+
+.balls{
+    background: var(--blue);
+    opacity: 0.1;
+
+    position: fixed;
+    clip-path: circle();
+}
+.balls.top{
+    width: 64.55rem;
+    height: 64.55rem;
+
+    top: -41rem;
+    right: -40rem;
+}
+.balls.bottom{
+    width: 21.2rem;
+    height: 21.2rem;
+
+    bottom: -14rem;
+    right: 5rem;
+}
