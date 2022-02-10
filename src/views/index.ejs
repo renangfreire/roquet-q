@@ -4,14 +4,14 @@
     <title>Home - Roquet.Q</title>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon">
 
     <!-- VIEW PORT -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- CSS -->
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="/css/global.css">
+    <link rel="stylesheet" href="/css/home.css">
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,7 +21,10 @@
 <body>
     <div class="content" id="home">
         <header>
-            <img class="logo" src="./images/logo.svg" alt="Logo Rocket.Q">
+            <a href="/">
+                <img class="logo" src="/images/logo.svg" alt="Logo Rocket.Q">
+            </a>
+            
         </header>
 
         <div id="bg">
@@ -31,34 +34,12 @@
 
         <main>
             <div class="container">
-                    <section class="loginbox">
-                        <h2 class="h2-title">Entre como participante</h2>
-                        <form action="">
-                            <label class="sr-only" for-id="room-id">Código da sala</label>
-                            <input type="number" name="sala" id="room-id" placeholder="Código da sala">
-                                <button>
-                                    <img src="images/enter-room.svg" alt="Entrar na Sala">
-                                    Entrar na sala
-                                </button>
-                        </form>
-                    </section>
-
-                        <div class="separator">
-                            <div></div>
-                            <div>ou</div>
-                            <div></div>
-                        </div>
-
-                    <section class="loginbox">
-                        <h2 class="h2-title">Crie sua própria sala, de forma fácil</h2>
-                        <a class="button outlined" href="create-pass">
-                            <img src="/images/users.svg" alt="Criar sala">
-                            Criar sala
-                        </a>
-                    </section>
+                <!-- Vai renderizar a parte certa de acordo com a url -->
+                <%- include(`parts/${page}`) %>
             </div>
         </main>
     </div>
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
+    
 </body>
 </html>

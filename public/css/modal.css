@@ -53,7 +53,8 @@
     text-align: center;
 }
 
-.modal input[type="text"]{
+.modal input[type="text"],
+.modal input[type="password"]{
     margin-top: 2.4rem;
     width: min(70%, 30.2rem);
     border: 2px solid var(--blue);
